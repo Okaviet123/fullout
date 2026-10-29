@@ -1,0 +1,891 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="robots" content="noindex, nofollow"></head><body>
+<title>FullouT × BKU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500;600;700&family=Anuphan:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* Layout: one 1040px column of full-bleed bands. The route runs left to right, Bangkok to Tokyo: celadon marks the Thai side (BKU), indigo marks the Japan side (FullouT). Vermilion is kept for the one action. Both faces come from a Thai foundry so Thai and Latin set together. Photos carry the proof; numbers sit beside them. */
+:root {
+  --paper: #F2F4F1;
+  --paper-2: #E7ECE8;
+  --panel: #FFFFFF;
+  --ink: #18202E;
+  --muted: #586271;
+  --line: #D6DDD8;
+  --th: #5E8F78;
+  --th-ink: #376651;
+  --th-soft: #DCE9E1;
+  --jp: #2A3D6B;
+  --jp-ink: #253765;
+  --jp-soft: #DFE4F0;
+  --shu: #BF4628;
+  --on-shu: #FFFFFF;
+  --deep: #1A2440;
+  --on-deep: #EEF1F8;
+  --on-deep-muted: #B7C0D6;
+  --logo-bg: #FFFFFF;
+  --display: "Bai Jamjuree", "Anuphan", "Helvetica Neue", Arial, sans-serif;
+  --body: "Anuphan", "Bai Jamjuree", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F141B; --paper-2: #141B24; --panel: #18202B; --ink: #E7ECEF; --muted: #A3ADBA; --line: #2A3441;
+    --th: #84B9A0; --th-ink: #9DD0B7; --th-soft: #1A2E26;
+    --jp: #8EA3D6; --jp-ink: #AFBFE8; --jp-soft: #1D2640;
+    --shu: #E3734F; --on-shu: #1A0D08;
+    --deep: #0A0F19; --on-deep: #EEF1F8; --on-deep-muted: #A9B3CB;
+    --logo-bg: #F4F5F7;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F141B; --paper-2: #141B24; --panel: #18202B; --ink: #E7ECEF; --muted: #A3ADBA; --line: #2A3441;
+  --th: #84B9A0; --th-ink: #9DD0B7; --th-soft: #1A2E26;
+  --jp: #8EA3D6; --jp-ink: #AFBFE8; --jp-soft: #1D2640;
+  --shu: #E3734F; --on-shu: #1A0D08;
+  --deep: #0A0F19; --on-deep: #EEF1F8; --on-deep-muted: #A9B3CB;
+  --logo-bg: #F4F5F7;
+  color-scheme: dark;
+}
+html, body { overflow-x: clip; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+img { display: block; max-width: 100%; height: auto; }
+
+/* language */
+#page[data-lang="en"] .th, #page[data-lang="en"] .ja, #page[data-lang="th"] .en, #page[data-lang="th"] .ja, #page[data-lang="ja"] .en, #page[data-lang="ja"] .th { display: none; }
+#page[data-lang="th"] { line-height: 1.85; }
+#page[data-lang="th"] .eyebrow, #page[data-lang="th"] .tagc, #page[data-lang="ja"] .eyebrow, #page[data-lang="ja"] .tagc { letter-spacing: 0.04em; text-transform: none; }
+#page[data-lang="ja"] { --display: "Bai Jamjuree", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif; --body: "Anuphan", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif; line-height: 1.85; }
+#page[data-lang="ja"] h1 { line-height: 1.15; letter-spacing: 0; font-size: clamp(2.1rem, 5.4vw, 4rem); }
+#page[data-lang="ja"] h1 .l1, #page[data-lang="ja"] h1 .l2 { white-space: nowrap; }
+#page[data-lang="ja"] h2 { letter-spacing: 0; }
+
+.inner { max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: clamp(24px, 3.5vw, 40px); }
+.band { padding-block: clamp(56px, 8vw, 96px); }
+.band.alt { background: var(--paper-2); }
+.band.white { background: var(--panel); }
+h1, h2, h3 { margin: 0; font-family: var(--display); text-wrap: balance; }
+h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.04; font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.65rem, 3.6vw, 2.5rem); line-height: 1.18; font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.12rem; line-height: 1.4; font-weight: 600; }
+p { margin: 0; max-width: 64ch; }
+a { color: var(--jp-ink); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--shu); outline-offset: 3px; }
+.eyebrow { font-family: var(--mono); font-size: 0.76rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.lead { font-size: clamp(1.05rem, 1.7vw, 1.2rem); color: var(--muted); }
+.note { font-size: 0.85rem; color: var(--muted); }
+.head { display: flex; flex-direction: column; gap: 12px; }
+
+/* top bar */
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--paper) 90%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.topbar .inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; }
+.brand { font-family: var(--display); font-weight: 600; font-size: 0.98rem; letter-spacing: 0.01em; display: flex; align-items: center; gap: 8px; min-width: 0; }
+.brand .x { color: var(--shu); font-weight: 500; }
+.brand .b1 { color: var(--jp-ink); } .brand .b2 { color: var(--th-ink); }
+.langs { display: inline-flex; flex: none; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); padding: 3px; gap: 2px; }
+.langs button { font: 500 0.88rem/1 var(--body); color: var(--muted); background: transparent; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+.langs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+/* hero */
+.hero { padding-block: clamp(48px, 8vw, 96px) clamp(40px, 6vw, 72px); }
+.hero-top { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+.hero-copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.hero h1 .l2 { color: var(--jp); display: block; }
+.hero h1 .l1 { color: var(--th-ink); display: block; }
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; min-width: 0; }
+.duo figure { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.duo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 16px; background: var(--paper-2); }
+.duo .bkk img { object-position: 50% 20%; }
+.duo .tyo img { filter: grayscale(1); }
+.duo figcaption { display: flex; flex-direction: column; gap: 0; font-size: 0.86rem; line-height: 1.4; }
+.duo figcaption b { font-family: var(--display); font-weight: 600; font-size: 1rem; }
+.duo .bkk figcaption span { color: var(--th-ink); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; }
+.duo .tyo figcaption span { color: var(--jp-ink); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 600 1rem/1 var(--body); text-decoration: none; border-radius: 999px; padding: 14px 22px; border: 1px solid transparent; }
+.btn.primary { background: var(--shu); color: var(--on-shu); }
+.btn.primary:hover { filter: brightness(1.07); }
+.btn.ghost { border-color: var(--line); color: var(--ink); background: var(--panel); }
+.btn.ghost:hover { border-color: var(--ink); }
+.show { display: inline-flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+.show b { color: var(--ink); font-weight: 500; }
+
+/* route */
+.route { display: grid; grid-template-columns: minmax(0, 1fr) minmax(56px, 0.5fr) minmax(0, 1fr); align-items: stretch; margin-top: 8px; }
+.stop { display: flex; flex-direction: column; gap: 10px; padding: clamp(18px, 2.6vw, 26px); border-radius: 18px; min-width: 0; }
+.stop.bkk { background: var(--th-soft); }
+.stop.tyo { background: var(--jp-soft); }
+.stop .city { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.stop .city b { font-family: var(--display); font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 700; line-height: 1.1; }
+.stop.bkk .city b { color: var(--th-ink); } .stop.tyo .city b { color: var(--jp-ink); }
+.stop .tz { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
+.stop .who { font-weight: 600; font-size: 0.98rem; }
+.stop ul { margin: 0; padding-left: 1.1em; font-size: 0.92rem; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
+.link { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+.link::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px dashed var(--muted); opacity: 0.55; }
+.link span { position: relative; font-family: var(--mono); font-size: 0.72rem; color: var(--muted); background: var(--paper); padding: 2px 6px; border-radius: 6px; text-align: center; line-height: 1.4; }
+.link .plane { font-size: 0.9rem; color: var(--shu); }
+
+/* two halves */
+.halves { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); }
+.half { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.half .photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--paper-2); }
+.half.bkk .photo { object-position: 50% 22%; }
+.half .body { padding: clamp(20px, 2.6vw, 30px); display: flex; flex-direction: column; gap: 16px; }
+.half .tagc { align-self: flex-start; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 11px; border-radius: 999px; }
+.half.bkk .tagc { background: var(--th-soft); color: var(--th-ink); }
+.half.tyo .tagc { background: var(--jp-soft); color: var(--jp-ink); }
+.half h3 { font-size: 1.35rem; }
+.half .co { font-size: 0.9rem; color: var(--muted); margin-top: -8px; }
+.points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.points li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: 8px; padding-block: 11px; border-top: 1px solid var(--line); font-size: 0.97rem; }
+.points li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; margin-top: 0.62em; }
+.half.bkk .points li::before { background: var(--th); }
+.half.tyo .points li::before { background: var(--jp); }
+.points b { font-weight: 600; }
+
+/* clients */
+.clients { background: var(--logo-bg); border: 1px solid var(--line); border-radius: 20px; padding: clamp(10px, 2vw, 20px); }
+.clients img { width: 100%; }
+
+/* makuake */
+.mk-top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+.big { font-family: var(--display); font-weight: 700; font-size: clamp(2.6rem, 6vw, 3.8rem); line-height: 1; letter-spacing: -0.02em; color: var(--jp); font-variant-numeric: tabular-nums; }
+.big small { font-size: 0.4em; font-weight: 600; letter-spacing: 0; color: var(--muted); margin-left: 6px; }
+.mk-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.mk-card { grid-column: span 2; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.mk-card:nth-child(4), .mk-card:nth-child(5) { grid-column: span 3; }
+.mk-card img { width: 100%; aspect-ratio: 593 / 350; object-fit: cover; }
+.mk-card .cap { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 2px; }
+.mk-card .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.mk-card b { font-family: var(--display); font-weight: 600; font-size: 1rem; }
+.mk-card .amt { font-family: var(--mono); font-weight: 500; font-size: 0.98rem; color: var(--jp); font-variant-numeric: tabular-nums; }
+.mk-card small { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
+
+/* live commerce */
+.live { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(14px, 2vw, 22px); }
+.shot { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.shot img { width: 100%; object-fit: cover; background: var(--paper-2); }
+.shot .pair { display: grid; grid-template-columns: 1.3fr 1fr; gap: 0; }
+.shot .pair img { height: 100%; aspect-ratio: 3 / 4; }
+.shot figcaption { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; font-size: 0.9rem; color: var(--muted); }
+.shot figcaption b { font-family: var(--display); font-weight: 600; font-size: 1.02rem; color: var(--ink); }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.fact { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.fact b { font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.05; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--jp); }
+.fact.bk b { color: var(--th-ink); }
+.fact span { font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+.videos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 1.1fr); gap: 12px; }
+.vid { margin: 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.vid img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 14px; background: var(--paper-2); }
+.vid figcaption { font-size: 0.82rem; color: var(--muted); line-height: 1.4; }
+.vid figcaption b { display: block; font-family: var(--mono); font-weight: 500; font-size: 0.95rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.vid.rank img { aspect-ratio: auto; object-fit: contain; background: #FFFFFF; border: 1px solid var(--line); }
+.creators { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(16px, 3vw, 32px); align-items: center; }
+.creators img { width: 100%; border-radius: 18px; }
+.creators .head p { font-size: 0.97rem; }
+
+/* results row */
+.results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+
+/* table */
+.tablebox { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 20px; }
+table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 0.94rem; }
+th, td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font-family: var(--mono); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); background: var(--paper); }
+td.k { font-family: var(--display); font-weight: 600; white-space: nowrap; }
+.own { display: inline-block; font-family: var(--mono); font-size: 0.72rem; padding: 2px 9px; border-radius: 999px; white-space: nowrap; margin: 0 4px 4px 0; }
+.own.jp { background: var(--jp-soft); color: var(--jp-ink); }
+.own.bk { background: var(--th-soft); color: var(--th-ink); }
+.term { font-family: var(--mono); font-size: 0.8em; color: var(--muted); }
+
+/* fit */
+.fit { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.fit li { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 16px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.fit .ck { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--th); display: grid; place-items: center; color: var(--th-ink); font-size: 0.8rem; font-weight: 700; }
+.fit b { font-family: var(--display); font-weight: 600; font-size: 1.02rem; line-height: 1.3; }
+.fit span { font-size: 0.88rem; color: var(--muted); line-height: 1.55; }
+.plus { font-size: 0.95rem; }
+.plus b { color: var(--th-ink); }
+
+/* steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
+.steps li { display: flex; flex-direction: column; gap: 8px; padding: 18px 18px 6px 0; min-width: 0; }
+.steps li + li { padding-left: 18px; border-left: 1px solid var(--line); }
+.steps .n { font-family: var(--mono); font-size: 0.8rem; color: var(--shu); font-weight: 500; }
+.steps b { font-family: var(--display); font-weight: 600; font-size: 1.1rem; }
+.steps span { font-size: 0.92rem; color: var(--muted); }
+
+/* offer + contact (deep band) */
+.deep { background: var(--deep); color: var(--on-deep); position: relative; overflow: hidden; }
+.deep::before { content: ""; position: absolute; inset: 0; background: url("img/tokyo.jpg") center 60% / cover no-repeat; opacity: 0.22; }
+.deep::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--deep) 55%, transparent), var(--deep) 70%); }
+.deep .inner { position: relative; z-index: 1; }
+.deep .eyebrow { color: var(--on-deep-muted); }
+.deep .lead, .deep p { color: var(--on-deep-muted); }
+.deep h2 { color: var(--on-deep); font-size: clamp(2rem, 5vw, 3.2rem); }
+.offer { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+.offer ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; color: var(--on-deep); }
+.qrs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 460px; }
+.qr { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.qr a { display: block; border-radius: 14px; }
+.qr img { box-sizing: border-box; width: 100%; aspect-ratio: 1; background: #FFFFFF; padding: 8px; border-radius: 14px; image-rendering: pixelated; }
+.qr figcaption { font-family: var(--mono); font-size: 0.8rem; color: var(--on-deep); }
+.mailrow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.mail { font-family: var(--mono); font-size: 0.95rem; user-select: all; color: var(--on-deep); }
+.copy { font: 500 0.82rem/1 var(--body); color: var(--on-deep); background: transparent; border: 1px solid color-mix(in srgb, var(--on-deep) 35%, transparent); border-radius: 999px; padding: 7px 13px; cursor: pointer; }
+.copy:hover { border-color: var(--on-deep); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips a { font-family: var(--mono); font-size: 0.8rem; text-decoration: none; color: var(--on-deep); border: 1px solid color-mix(in srgb, var(--on-deep) 30%, transparent); border-radius: 999px; padding: 6px 13px; }
+.chips a:hover { border-color: var(--on-deep); }
+.people { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding-top: 28px; border-top: 1px solid color-mix(in srgb, var(--on-deep) 18%, transparent); }
+.person { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: center; min-width: 0; }
+.person img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
+.person img.yu { object-position: 50% 18%; }
+.person b { display: block; font-family: var(--display); font-size: 1.08rem; color: var(--on-deep); }
+.person span { display: block; font-size: 0.86rem; color: var(--on-deep-muted); line-height: 1.5; }
+footer.src { background: var(--deep); color: var(--on-deep-muted); font-size: 0.78rem; padding-block: 0 40px; }
+footer.src p { max-width: 90ch; }
+
+@media (max-width: 900px) {
+  .fit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fit li:last-child { grid-column: 1 / -1; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps li:nth-child(3) { padding-left: 0; border-left: 0; }
+  .steps li:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .offer, .creators { grid-template-columns: minmax(0, 1fr); }
+  .results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .videos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .vid.rank { display: none; }
+}
+@media (max-width: 760px) {
+  .hero-top { grid-template-columns: minmax(0, 1fr); }
+  .duo { max-width: 420px; }
+  .live { grid-template-columns: minmax(0, 1fr); }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .mk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mk-card, .mk-card:nth-child(4), .mk-card:nth-child(5) { grid-column: span 1; }
+  .mk-card:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 680px) {
+  .route { grid-template-columns: minmax(0, 1fr); }
+  .link { min-height: 56px; }
+  .link::before { left: 50%; right: auto; top: 0; bottom: 0; border-top: 0; border-left: 2px dashed var(--muted); }
+  .halves, .people { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 440px) {
+  .brand { font-size: 0.86rem; gap: 5px; }
+  .langs button { padding: 7px 10px; font-size: 0.82rem; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .steps li, .steps li + li { padding-left: 0; border-left: 0; }
+  .steps li + li { border-top: 1px solid var(--line); }
+  .fit { grid-template-columns: minmax(0, 1fr); }
+  .results { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* added in v5 */
+.toc { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px; }
+.toc a { font-size: 0.86rem; text-decoration: none; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; }
+.toc a:hover { border-color: var(--ink); }
+.people3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.pcard { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 18px; display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 14px; align-items: center; min-width: 0; }
+.pcard img { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; }
+.pcard img.bw { filter: grayscale(1); }
+.pcard img.yu { object-position: 50% 18%; }
+.pcard b { display: block; font-family: var(--display); font-weight: 600; font-size: 1.05rem; }
+.pcard .r { display: block; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.04em; margin-bottom: 4px; }
+.pcard.jp .r { color: var(--jp-ink); } .pcard.bk .r { color: var(--th-ink); }
+.pcard p { font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+.nums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); }
+.numset { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.numset h3 { display: flex; align-items: center; gap: 10px; }
+.numset h3::before { content: ""; width: 10px; height: 10px; border-radius: 50%; }
+.numset.jp h3::before { background: var(--jp); } .numset.bk h3::before { background: var(--th); }
+.numgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.numset.bk .fact b { color: var(--th-ink); }
+.method { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.method li { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.method .n { font-family: var(--mono); font-size: 0.78rem; color: var(--jp-ink); }
+.method b { font-family: var(--display); font-weight: 600; font-size: 1.04rem; line-height: 1.35; }
+.method span.d { font-size: 0.88rem; color: var(--muted); line-height: 1.55; }
+.formula { font-family: var(--display); font-weight: 600; font-size: clamp(1.15rem, 2.4vw, 1.5rem); color: var(--jp); }
+.journey { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--jp); }
+.journey li { display: flex; flex-direction: column; gap: 6px; padding: 16px 14px 4px 0; min-width: 0; }
+.journey li + li { padding-left: 14px; border-left: 1px solid var(--line); }
+.journey .n { font-family: var(--mono); font-size: 0.76rem; color: var(--jp-ink); }
+.journey b { font-family: var(--display); font-weight: 600; font-size: 1rem; line-height: 1.35; }
+.journey span.d { font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+.ranks { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+.ranks figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.ranks img { width: 100%; background: #FFFFFF; }
+.ranks figcaption { padding: 12px 14px; font-size: 0.88rem; color: var(--muted); }
+.ranks figcaption b { color: var(--ink); font-family: var(--display); font-weight: 600; }
+.top10 { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 8px; }
+.top10 li { position: relative; min-width: 0; }
+.top10 img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; }
+.top10 li::after { content: "#1"; position: absolute; left: 6px; top: 6px; font-family: var(--mono); font-size: 0.68rem; font-weight: 500; color: #FFFFFF; background: var(--shu); border-radius: 6px; padding: 1px 6px; }
+.amp { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.ampcard { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.ampcard img { width: 100%; aspect-ratio: 1200 / 385; object-fit: cover; }
+.ampcard .body { padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+.ampcard .big2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1; color: var(--jp); }
+.ampcard p { font-size: 0.92rem; color: var(--muted); }
+.partners2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.pbox { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.pbox .badge { align-self: flex-start; font-family: var(--display); font-weight: 700; font-size: 0.95rem; color: #FFFFFF; background: var(--jp); border-radius: 8px; padding: 2px 10px; }
+.pbox ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 4px; font-size: 0.92rem; color: var(--muted); }
+.svc { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.svc > li { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.svc b { font-family: var(--display); font-weight: 600; font-size: 1.02rem; }
+.svc ul { margin: 0; padding-left: 1.1em; font-size: 0.86rem; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
+.bkugrid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(18px, 3vw, 32px); align-items: start; }
+.bkuphotos { display: grid; grid-template-columns: 1fr 1.25fr; gap: 10px; }
+.bkuphotos figure { margin: 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.bkuphotos img { width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 14px; }
+.bkuphotos figcaption { font-size: 0.8rem; color: var(--muted); }
+.lic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.lic div { border-left: 3px solid var(--th); padding: 4px 0 4px 12px; font-size: 0.9rem; }
+.lic b { display: block; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--th-ink); }
+.tl { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.tl li { display: grid; grid-template-columns: 6.2rem minmax(0, 1fr); gap: 14px; padding-block: 12px; border-top: 1px solid var(--line); font-size: 0.94rem; }
+.tl li:last-child { border-bottom: 1px solid var(--line); }
+.tl .y { font-family: var(--mono); font-size: 0.82rem; color: var(--th-ink); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.tl b { font-family: var(--display); font-weight: 600; }
+.chipsline { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; }
+.chipsline span.c { font-family: var(--mono); font-size: 0.78rem; padding: 3px 11px; border-radius: 999px; background: var(--th-soft); color: var(--th-ink); }
+.chipsline .ar { color: var(--muted); font-size: 0.8rem; }
+.silk { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+@media (max-width: 900px) {
+  .people3 { grid-template-columns: minmax(0, 1fr); }
+  .nums, .bkugrid { grid-template-columns: minmax(0, 1fr); }
+  .method, .svc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .journey li:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .journey li:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .top10 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .ranks, .amp, .partners2 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 440px) {
+  .method, .svc, .journey, .lic, .numgrid { grid-template-columns: minmax(0, 1fr); }
+  .journey li, .journey li + li { padding-left: 0; border-left: 0; }
+  .journey li + li { border-top: 1px solid var(--line); }
+  .tl li { grid-template-columns: 4.8rem minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); }
+</style>
+
+<div id="page" data-lang="en">
+
+<nav class="topbar" aria-label="Language">
+  <div class="inner">
+    <span class="brand"><span class="b1">FullouT</span><span class="x">×</span><span class="b2">BKU</span></span>
+    <div class="langs" role="group" aria-label="Language / ภาษา / 言語">
+      <button type="button" id="lang-en" data-l="en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-th" data-l="th" aria-pressed="false">ไทย</button>
+      <button type="button" id="lang-ja" data-l="ja" aria-pressed="false">日本語</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="band hero">
+  <div class="inner">
+    <div class="hero-top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="en">For Thai beauty brands · Japan entry</span><span class="th">สำหรับแบรนด์ความงามไทย · บุกตลาดญี่ปุ่น</span><span class="ja">タイの美容ブランドへ · 日本進出のご案内</span></p>
+        <h1>
+          <span class="en"><span class="l1">Made in Thailand.</span><span class="l2">Wanted in Japan.</span></span>
+          <span class="th"><span class="l1">ผลิตในไทย</span><span class="l2">ให้คนญี่ปุ่นอยากได้</span></span><span class="ja"><span class="l1">タイで生まれ、</span><span class="l2">日本で選ばれる。</span></span>
+        </h1>
+        <p class="lead">
+          <span class="en">We are a two-company team looking for a small number of Thai beauty brands with a real edge. One of us works next to you in Bangkok. The other runs a performance-marketing and live-commerce team in Tokyo. Together we handle Japan’s rules, the launch and the selling, so you can focus on the product.</span>
+          <span class="th">เราคือทีมจากสองบริษัทที่กำลังมองหาแบรนด์ความงามไทยจำนวนไม่มากที่มีจุดเด่นชัดเจน ฝ่ายหนึ่งทำงานอยู่ใกล้คุณที่กรุงเทพฯ อีกฝ่ายมีทีมการตลาดออนไลน์และไลฟ์คอมเมิร์ซที่โตเกียว เราดูแลเรื่องกฎระเบียบของญี่ปุ่น การเปิดตัว และการขายให้ เพื่อให้คุณโฟกัสกับตัวสินค้าได้เต็มที่</span><span class="ja">私たちは2社でひとつのチームを組み、確かな強みを持つタイの美容ブランドを少数だけ探しています。1社はバンコクで皆さまのすぐそばに、もう1社は東京でパフォーマンスマーケティングとライブコマースのチームを運営しています。日本の規制対応、ローンチ、販売は私たちが担い、皆さまには製品づくりに集中していただけます。</span>
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#contact"><span class="en">Meet us at COSMEX 2026</span><span class="th">นัดพบเราที่ COSMEX 2026</span><span class="ja">COSMEX 2026で面談する</span></a>
+          <a class="btn ghost" href="#offer"><span class="en">Send us one product</span><span class="th">ส่งสินค้ามาให้เราดู 1 ชิ้น</span><span class="ja">製品を1つ送る</span></a>
+        </div>
+        <p class="show"><b>COSMEX 2026</b><span>BITEC Bangkok</span><span class="en">Nov 3–5, 2026</span><span class="th">3–5 พ.ย. 2569</span><span class="ja">2026年11月3日〜5日</span></p>
+      </div>
+      <div class="duo">
+        <figure class="bkk">
+          <img src="img/yuhei.jpg" alt="Yuhei Yamada" width="488" height="650">
+          <figcaption><b>Yuhei Yamada</b><span>BANGKOK · BKU</span></figcaption>
+        </figure>
+        <figure class="tyo">
+          <img src="img/isaka.jpg" alt="Yusuke Isaka" width="180" height="180">
+          <figcaption><b>Yusuke Isaka</b><span>TOKYO · FULLOUT</span></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="route" aria-label="Bangkok to Tokyo">
+      <div class="stop bkk">
+        <div class="city"><b><span class="en">Bangkok</span><span class="th">กรุงเทพฯ</span><span class="ja">バンコク</span></b><span class="tz">UTC+7</span></div>
+        <span class="who">BKU · Yuhei Yamada</span>
+        <ul>
+          <li><span class="en">Meets you and visits your factory</span><span class="th">พบคุณและเยี่ยมชมโรงงาน</span><span class="ja">直接お会いし、工場を訪問</span></li>
+          <li><span class="en">Buys samples and first orders</span><span class="th">ซื้อสินค้าตัวอย่างและออร์เดอร์แรก</span><span class="ja">サンプルと初回発注を買い取り</span></li>
+          <li><span class="en">Quality, documents, shipping</span><span class="th">คุณภาพ เอกสาร การจัดส่ง</span><span class="ja">品質・書類・出荷の管理</span></li>
+        </ul>
+      </div>
+      <div class="link" aria-hidden="true"><span class="plane">✈</span><span>BKK → TYO<br>2h time diff.</span></div>
+      <div class="stop tyo">
+        <div class="city"><b><span class="en">Tokyo</span><span class="th">โตเกียว</span><span class="ja">東京</span></b><span class="tz">UTC+9</span></div>
+        <span class="who">FullouT · Yusuke Isaka</span>
+        <ul>
+          <li><span class="en">Japan’s cosmetics and labeling rules</span><span class="th">กฎเครื่องสำอางและฉลากของญี่ปุ่น</span><span class="ja">日本の化粧品規制と表示ルール</span></li>
+          <li><span class="en">Crowdfunding and live-commerce launch</span><span class="th">เปิดตัวผ่านคราวด์ฟันดิงและไลฟ์คอมเมิร์ซ</span><span class="ja">クラファンとライブコマースでローンチ</span></li>
+          <li><span class="en">Ads, creators, marketplaces, retail</span><span class="th">โฆษณา ครีเอเตอร์ มาร์เก็ตเพลส ร้านค้าปลีก</span><span class="ja">広告・クリエイター・ECモール・小売</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="toc" aria-label="On this page">
+      <a href="#team"><span class="en">Team</span><span class="th">ทีม</span><span class="ja">チーム</span></a>
+      <a href="#numbers"><span class="en">In numbers</span><span class="th">ตัวเลข</span><span class="ja">数字</span></a>
+      <a href="#clients"><span class="en">Clients</span><span class="th">ลูกค้า</span><span class="ja">取引先</span></a>
+      <a href="#proof">Makuake</a>
+      <a href="#method"><span class="en">How we sell</span><span class="th">วิธีการขาย</span><span class="ja">売り方</span></a>
+      <a href="#live"><span class="en">Live commerce</span><span class="th">ไลฟ์คอมเมิร์ซ</span><span class="ja">ライブコマース</span></a>
+      <a href="#tiktok">TikTok Shop</a>
+      <a href="#japan"><span class="en">Japan’s rules</span><span class="th">กฎของญี่ปุ่น</span><span class="ja">日本の規制</span></a>
+      <a href="#fit"><span class="en">Who we look for</span><span class="th">แบรนด์ที่เรามองหา</span><span class="ja">求めるブランド</span></a>
+      <a href="#steps"><span class="en">How we start</span><span class="th">เริ่มต้นอย่างไร</span><span class="ja">進め方</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="th">ติดต่อ</span><span class="ja">連絡先</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- TWO HALVES -->
+<section class="band white" id="team">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">Why this team</span><span class="th">ทำไมต้องเป็นทีมนี้</span><span class="ja">このチームを選ぶ理由</span></p>
+      <h2><span class="en">One team at both ends of the route</span><span class="th">ทีมเดียว ดูแลทั้งต้นทางและปลายทาง</span><span class="ja">ルートの両端を、ひとつのチームで</span></h2>
+      <p class="lead"><span class="en">Most Thai brands need two partners to reach Japan: someone who understands their factory, and someone who understands Japanese shoppers. You get both, already working together.</span><span class="th">แบรนด์ไทยส่วนใหญ่ต้องมีพาร์ทเนอร์สองฝ่ายจึงจะเข้าถึงญี่ปุ่นได้ คือคนที่เข้าใจโรงงานของคุณ และคนที่เข้าใจผู้บริโภคญี่ปุ่น ที่นี่คุณได้ทั้งสองฝ่ายที่ทำงานร่วมกันอยู่แล้ว</span><span class="ja">タイのブランドが日本に届くには、工場を理解する相手と、日本の消費者を理解する相手の2者が必要です。その両方が、すでに一緒に動いています。</span></p>
+    </div>
+    <div class="halves">
+      <article class="half bkk">
+        <img class="photo" src="img/yuhei.jpg" alt="Yuhei Yamada" width="488" height="650" loading="lazy">
+        <div class="body">
+          <span class="tagc"><span class="en">Bangkok side</span><span class="th">ฝั่งกรุงเทพฯ</span><span class="ja">バンコク側</span></span>
+          <h3><span class="en">Next to your factory</span><span class="th">อยู่ใกล้โรงงานของคุณ</span><span class="ja">工場のすぐそばに</span></h3>
+          <p class="co">Yuhei Yamada · BKU CO.,LTD.</p>
+          <ul class="points">
+            <li><span><span class="en"><b>Based in Bangkok.</b> We meet face to face and see your production line ourselves.</span><span class="th"><b>อยู่ที่กรุงเทพฯ</b> พบกันแบบตัวต่อตัว และไปดูไลน์การผลิตด้วยตัวเอง</span><span class="ja"><b>バンコク在住。</b>直接お会いし、製造ラインも自分の目で確認します。</span></span></li>
+            <li><span><span class="en"><b>A former production engineer.</b> Five years at DENSO in Japan and the US. He reads a process, a QC record and a spec the way a Japanese buyer will.</span><span class="th"><b>อดีตวิศวกรฝ่ายผลิต</b> ทำงานที่ DENSO ในญี่ปุ่นและสหรัฐฯ 5 ปี อ่านกระบวนการผลิต บันทึก QC และสเปกได้แบบที่ผู้ซื้อญี่ปุ่นจะตรวจ</span><span class="ja"><b>元・生産技術エンジニア。</b>デンソーで日米5年。工程、品質記録、仕様書を、日本のバイヤーと同じ目線で読みます。</span></span></li>
+            <li><span><span class="en"><b>A buyer, not a broker.</b> We pay for samples and place the first order, then handle the trade paperwork.</span><span class="th"><b>เป็นผู้ซื้อ ไม่ใช่นายหน้า</b> เราจ่ายค่าสินค้าตัวอย่างและสั่งออร์เดอร์แรก พร้อมดูแลเอกสารการค้า</span><span class="ja"><b>仲介ではなく買い手。</b>サンプル代を支払い、初回発注を行い、貿易書類まで対応します。</span></span></li>
+            <li><span><span class="en"><b>One contact on the Thai side.</b> Yuhei speaks Japanese and English, and explains what Japanese buyers expect directly.</span><span class="th"><b>ผู้ประสานงานคนเดียวฝั่งไทย</b> Yuhei พูดภาษาญี่ปุ่นและอังกฤษ และอธิบายสิ่งที่ผู้ซื้อญี่ปุ่นคาดหวังได้โดยตรง</span><span class="ja"><b>タイ側の窓口はひとり。</b>Yuheiが日本語と英語で、日本のバイヤーが求めることを直接お伝えします。</span></span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="half tyo">
+        <img class="photo" src="img/fullout-team.jpg" alt="The FullouT team in Tokyo" width="1200" height="900" loading="lazy">
+        <div class="body">
+          <span class="tagc"><span class="en">Tokyo side</span><span class="th">ฝั่งโตเกียว</span><span class="ja">東京側</span></span>
+          <h3><span class="en">Next to your customers</span><span class="th">อยู่ใกล้ลูกค้าของคุณ</span><span class="ja">お客さまのすぐそばに</span></h3>
+          <p class="co">FullouT Co., Ltd. · Shibuya, Tokyo</p>
+          <ul class="points">
+            <li><span><span class="en"><b>Performance marketing since 2013.</b> 200+ client projects, many of them beauty and health D2C brands.</span><span class="th"><b>ทำการตลาดเชิงผลลัพธ์มาตั้งแต่ปี 2013</b> มีโปรเจกต์ลูกค้ากว่า 200 โปรเจกต์ หลายรายเป็นแบรนด์ความงามและสุขภาพแบบ D2C</span><span class="ja"><b>2013年からパフォーマンスマーケティング。</b>200件以上の支援実績があり、その多くが美容・健康のD2Cブランドです。</span></span></li>
+            <li><span><span class="en"><b>Japan’s rules in-house.</b> Knows the PMD Act and labeling rules that decide what a cosmetic may say in Japan.</span><span class="th"><b>มีความรู้ด้านกฎหมายในทีม</b> เข้าใจกฎหมาย PMD Act และกฎฉลากที่กำหนดว่าเครื่องสำอางพูดอะไรได้บ้างในญี่ปุ่น</span><span class="ja"><b>日本の規制を社内で把握。</b>化粧品が日本で何を言えるかを決める薬機法と表示ルールに精通しています。</span></span></li>
+            <li><span><span class="en"><b>Official TikTok Shop partner</b> (TSP and TAP), running its own live-commerce channel in Japan.</span><span class="th"><b>พาร์ทเนอร์ทางการของ TikTok Shop</b> (TSP และ TAP) มีช่องไลฟ์คอมเมิร์ซของตัวเองในญี่ปุ่น</span><span class="ja"><b>TikTok Shop公式パートナー</b>（TSP・TAP）として、日本で自社のライブコマースチャンネルを運営しています。</span></span></li>
+            <li><span><span class="en"><b>Its own creator networks</b> on Lemon8 and TikTok, and its own affiliate network, SIXPACK-C.</span><span class="th"><b>มีเครือข่ายครีเอเตอร์ของตัวเอง</b> บน Lemon8 และ TikTok รวมถึงเครือข่าย affiliate ของตัวเองชื่อ SIXPACK-C</span><span class="ja"><b>自社のクリエイターネットワーク</b>をLemon8とTikTokに持ち、自社アフィリエイトネットワーク「SIXPACK-C」も運営しています。</span></span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="people3">
+      <div class="pcard jp"><img class="bw" src="img/kaneda.jpg" alt="Kazuya Kaneda" width="180" height="180" loading="lazy"><div><b>Kazuya Kaneda</b><span class="r"><span class="en">REPRESENTATIVE DIRECTOR &amp; CEO · FULLOUT</span><span class="th">ผู้แทนกรรมการและ CEO · FULLOUT</span><span class="ja">代表取締役CEO · FULLOUT</span></span><p><span class="en">Co-founded FullouT in 2013. Leads the group’s vision, growth and performance culture.</span><span class="th">ร่วมก่อตั้ง FullouT ในปี 2013 ดูแลวิสัยทัศน์ การเติบโต และวัฒนธรรมการทำงานที่เน้นผลลัพธ์ของกลุ่ม</span><span class="ja">2013年にFullouTを共同創業。グループのビジョン、成長、成果主義の文化を率いる。</span></p></div></div>
+      <div class="pcard jp"><img class="bw" src="img/isaka.jpg" alt="Yusuke Isaka" width="180" height="180" loading="lazy"><div><b>Yusuke Isaka</b><span class="r"><span class="en">DIRECTOR · CO-FOUNDER · FULLOUT</span><span class="th">กรรมการ · ผู้ร่วมก่อตั้ง · FULLOUT</span><span class="ja">取締役・共同創業者 · FULLOUT</span></span><p><span class="en">Leads D2C and cross-border commerce: sourcing, launch and multi-channel growth.</span><span class="th">ดูแลธุรกิจ D2C และการค้าข้ามพรมแดน ตั้งแต่การคัดเลือกสินค้า การเปิดตัว จนถึงการขยายหลายช่องทาง</span><span class="ja">D2C・越境コマースを統括。商品発掘、ローンチ、多チャネル展開まで。</span></p></div></div>
+      <div class="pcard bk"><img class="yu" src="img/yuhei.jpg" alt="Yuhei Yamada" width="488" height="650" loading="lazy"><div><b>Yuhei Yamada</b><span class="r">DIRECTOR &amp; COO · BKU</span><p><span class="en">Based in Bangkok. Former production engineer at DENSO; leads marketing, strategy and new business at BKU.</span><span class="th">อยู่ที่กรุงเทพฯ อดีตวิศวกรฝ่ายผลิตที่ DENSO ดูแลการตลาด กลยุทธ์ และธุรกิจใหม่ของ BKU</span><span class="ja">バンコク拠点。元デンソーの生産技術エンジニアで、BKUのマーケティング・戦略・新規事業を担当。</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="band alt" id="numbers">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">In numbers</span><span class="th">ตัวเลข</span><span class="ja">数字で見る</span></p>
+      <h2><span class="en">Two companies, one track record</span><span class="th">สองบริษัท หนึ่งผลงาน</span><span class="ja">2社の実績</span></h2>
+    </div>
+    <div class="nums">
+      <div class="numset jp">
+        <h3>FullouT · <span class="en">Tokyo</span><span class="th">โตเกียว</span><span class="ja">東京</span></h3>
+        <div class="numgrid">
+          <div class="fact"><b>2013</b><span><span class="en">Founded in Shibuya, Tokyo</span><span class="th">ก่อตั้งที่ชิบุยะ โตเกียว</span><span class="ja">東京・渋谷で創業</span></span></div>
+          <div class="fact"><b>¥10B+</b><span><span class="en">Advertising spend managed</span><span class="th">งบโฆษณาที่บริหารมาแล้ว</span><span class="ja">運用してきた広告費</span></span></div>
+          <div class="fact"><b>200+</b><span><span class="en">Client projects</span><span class="th">โปรเจกต์ลูกค้า</span><span class="ja">クライアント支援件数</span></span></div>
+          <div class="fact"><b>37</b><span><span class="en">Team members</span><span class="th">พนักงาน</span><span class="ja">従業員数</span></span></div>
+        </div>
+      </div>
+      <div class="numset bk">
+        <h3>BKU · <span class="en">Bangkok</span><span class="th">กรุงเทพฯ</span><span class="ja">バンコク</span></h3>
+        <div class="numgrid">
+          <div class="fact bk"><b>BKK</b><span><span class="en">Based in Bangkok, close to your factory</span><span class="th">อยู่ที่กรุงเทพฯ ใกล้โรงงานของคุณ</span><span class="ja">バンコク拠点。工場のすぐ近く</span></span></div>
+          <div class="fact bk"><b>5 <span class="en">yrs</span><span class="th">ปี</span><span class="ja">年</span></b><span><span class="en">Production engineering at DENSO, Japan and the US</span><span class="th">วิศวกรรมการผลิตที่ DENSO ญี่ปุ่นและสหรัฐฯ</span><span class="ja">デンソー（日本・米国）での生産技術</span></span></div>
+          <div class="fact bk"><b>2017</b><span><span class="en">Running business between Southeast Asia and Japan since</span><span class="th">ทำธุรกิจระหว่างอาเซียนกับญี่ปุ่นมาตั้งแต่</span><span class="ja">東南アジアと日本をつなぐ事業を開始</span></span></div>
+          <div class="fact bk"><b>JP · EN</b><span><span class="en">Japanese and English, one point of contact</span><span class="th">ภาษาญี่ปุ่นและอังกฤษ ผู้ประสานงานคนเดียว</span><span class="ja">日本語と英語、窓口はひとり</span></span></div>
+        </div>
+      </div>
+    </div>
+    <p class="note"><span class="en">FullouT figures are from its company materials.</span><span class="th">ตัวเลขของ FullouT มาจากเอกสารบริษัท</span><span class="ja">FullouTの数値は同社資料より。</span></p>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="band" id="clients">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">Clients</span><span class="th">ลูกค้า</span><span class="ja">取引先</span></p>
+      <h2><span class="en">Brands FullouT has worked with</span><span class="th">แบรนด์ที่ FullouT เคยร่วมงานด้วย</span><span class="ja">FullouTの取引先</span></h2>
+      <p class="lead"><span class="en">Japanese makers of cosmetics, health products and food, including Shiseido.</span><span class="th">ผู้ผลิตเครื่องสำอาง ผลิตภัณฑ์สุขภาพ และอาหารของญี่ปุ่น รวมถึง Shiseido</span><span class="ja">資生堂をはじめとする、日本の化粧品・健康食品・食品メーカー。</span></p>
+    </div>
+    <div class="clients"><img src="img/clients.png" alt="Client logos: Shiseido, Eisai, Yakult, P&amp;G, Ajinomoto, UHA Mikakuto, Nature Lab, RaNKUP, KINS, Gurunavi, Matsui and others" width="1200" height="390" loading="lazy"></div>
+    <p class="note"><span class="en">Selected clients, in no particular order, from FullouT’s company materials.</span><span class="th">ลูกค้าบางส่วน ไม่เรียงลำดับ จากเอกสารบริษัทของ FullouT</span><span class="ja">FullouTの会社資料より一部抜粋（順不同）。</span></p>
+  </div>
+</section>
+
+<!-- MAKUAKE -->
+<section class="band white" id="proof">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">Track record · Makuake</span><span class="th">ผลงาน · Makuake</span><span class="ja">実績 · Makuake</span></p>
+      <h2><span class="en">Overseas products, launched in Japan</span><span class="th">สินค้าต่างประเทศที่เปิดตัวในญี่ปุ่นสำเร็จ</span><span class="ja">海外製品を、日本でローンチ</span></h2>
+    </div>
+    <div class="mk-top">
+      <p class="lead"><span class="en">Makuake is Japan’s crowdfunding platform for new products. These five launches were supported by FullouT.</span><span class="th">Makuake คือแพลตฟอร์มคราวด์ฟันดิงสินค้าใหม่ของญี่ปุ่น ทั้ง 5 โปรเจกต์นี้ FullouT ช่วยเปิดตัว</span><span class="ja">Makuakeは日本の新製品向けクラウドファンディングです。以下の5件はFullouTが支援したローンチです。</span></p>
+      <div class="big">¥84.6M<small><span class="en">8,538 backers</span><span class="th">ผู้สนับสนุน 8,538 คน</span><span class="ja">サポーター8,538人</span></small></div>
+    </div>
+    <div class="mk-grid">
+      <figure class="mk-card" style="margin:0"><img src="img/mk-zeroice.jpg" alt="ZERO ICE Makuake banner" width="600" height="341" loading="lazy"><figcaption class="cap"><span class="row"><b>ZERO ICE</b><span class="amt">¥24.7M</span></span><small><span class="en">AUSTRALIA · 2,440 BACKERS</span><span class="th">ออสเตรเลีย · 2,440 คน</span><span class="ja">オーストラリア · 2,440人</span></small></figcaption></figure>
+      <figure class="mk-card" style="margin:0"><img src="img/mk-skidger.jpg" alt="SKIDGER Makuake banner" width="593" height="350" loading="lazy"><figcaption class="cap"><span class="row"><b>SKIDGER</b><span class="amt">¥21.3M</span></span><small><span class="en">USA · 2,359 BACKERS</span><span class="th">สหรัฐฯ · 2,359 คน</span><span class="ja">アメリカ · 2,359人</span></small></figcaption></figure>
+      <figure class="mk-card" style="margin:0"><img src="img/mk-henson.jpg" alt="HENSON Makuake banner" width="600" height="354" loading="lazy"><figcaption class="cap"><span class="row"><b>HENSON</b><span class="amt">¥17.0M</span></span><small><span class="en">CANADA · 1,285 BACKERS</span><span class="th">แคนาดา · 1,285 คน</span><span class="ja">カナダ · 1,285人</span></small></figcaption></figure>
+      <figure class="mk-card" style="margin:0"><img src="img/mk-sugoi.jpg" alt="SUGOI power bank Makuake banner" width="593" height="350" loading="lazy"><figcaption class="cap"><span class="row"><b>SUGOI</b><span class="amt">¥11.6M</span></span><small><span class="en">CHINA · 1,657 BACKERS</span><span class="th">จีน · 1,657 คน</span><span class="ja">中国 · 1,657人</span></small></figcaption></figure>
+      <figure class="mk-card" style="margin:0"><img src="img/mk-evgoer.jpg" alt="evgoer RS11 Makuake banner" width="593" height="350" loading="lazy"><figcaption class="cap"><span class="row"><b>evgoer RS11</b><span class="amt">¥10.0M</span></span><small><span class="en">CHINA · 797 BACKERS</span><span class="th">จีน · 797 คน</span><span class="ja">中国 · 797人</span></small></figcaption></figure>
+    </div>
+    <p class="note"><span class="en">Total support purchases shown on each Makuake project page.</span><span class="th">ยอดสนับสนุนรวมตามที่แสดงบนหน้าโปรเจกต์ Makuake ของแต่ละสินค้า</span><span class="ja">各Makuakeプロジェクトページに表示された応援購入総額。</span></p>
+    <div class="results">
+      <div class="fact"><b>~4×</b><span><span class="en">Revenue growth for a beauty-device client, which then listed on the stock market</span><span class="th">ยอดขายของลูกค้าแบรนด์อุปกรณ์ความงามเติบโตราว 4 เท่า และเข้าตลาดหลักทรัพย์ได้</span><span class="ja">美容機器メーカーの売上を約4倍に伸ばし、同社は上場</span></span></div>
+      <div class="fact"><b>10×</b><span><span class="en">Amazon sales growth for a health-supplement client</span><span class="th">ยอดขายบน Amazon ของลูกค้าอาหารเสริมเติบโต 10 เท่า</span><span class="ja">健康サプリメントのAmazon売上が10倍に</span></span></div>
+      <div class="fact"><b>Loft · Bic</b><span><span class="en">Shelf space secured at Loft and Bic Camera for client products</span><span class="th">ได้พื้นที่วางขายที่ Loft และ Bic Camera ให้สินค้าของลูกค้า</span><span class="ja">クライアント製品のロフト・ビックカメラでの棚を獲得</span></span></div>
+      <div class="fact"><b>No.2</b><span><span class="en">Rakuten ranking for a client in ladies’ fashion</span><span class="th">อันดับ 2 บน Rakuten หมวดแฟชั่นผู้หญิงของลูกค้า</span><span class="ja">クライアントの楽天ランキング（レディースファッション）</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="band alt" id="method">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">How FullouT sells</span><span class="th">วิธีขายของ FullouT</span><span class="ja">FullouTの売り方</span></p>
+      <h2><span class="en">Find the demand first. Then scale it.</span><span class="th">หาความต้องการให้เจอก่อน แล้วค่อยขยาย</span><span class="ja">まず需要を見つけ、それから広げる</span></h2>
+      <p class="formula"><span class="en">Demand = root desire + parameters</span><span class="th">ความต้องการ = ความปรารถนาที่แท้จริง + เงื่อนไข</span><span class="ja">需要 ＝ 根源的欲求 ＋ パラメーター</span></p>
+    </div>
+    <ol class="method">
+      <li><span class="n">01</span><b><span class="en">One-to-one customer interviews</span><span class="th">สัมภาษณ์ลูกค้าแบบตัวต่อตัว</span><span class="ja">N=1の顧客インタビュー</span></b><span class="d"><span class="en">Real users are interviewed one by one to put into words the desires and pains they have not noticed themselves.</span><span class="th">สัมภาษณ์ผู้ใช้จริงทีละคน เพื่อหาความปรารถนาและปัญหาที่แม้แต่ตัวลูกค้าเองยังไม่รู้ตัว</span><span class="ja">実際のユーザーに1対1で話を聞き、本人も気づいていない欲求や不満を言葉にする。</span></span></li>
+      <li><span class="n">02</span><b><span class="en">Define the demand</span><span class="th">กำหนดความต้องการให้ชัด</span><span class="ja">需要を定義する</span></b><span class="d"><span class="en">The core of the demand is fixed before a single ad runs, so the positioning is right from day one.</span><span class="th">กำหนดแก่นของความต้องการก่อนจะยิงโฆษณาชิ้นแรก เพื่อให้วางตำแหน่งสินค้าได้ถูกตั้งแต่วันแรก</span><span class="ja">広告を1本出す前に需要の本質を決め、初日から正しい打ち出しにする。</span></span></li>
+      <li><span class="n">03</span><b><span class="en">AI-powered advertising</span><span class="th">โฆษณาที่ขับเคลื่อนด้วย AI</span><span class="ja">AIを活用した広告運用</span></b><span class="d"><span class="en">In-house teams for Meta, TikTok, YouTube and Google use AI in both creative and campaign tuning.</span><span class="th">ทีมภายในสำหรับ Meta, TikTok, YouTube และ Google ใช้ AI ทั้งในการสร้างครีเอทีฟและปรับแคมเปญ</span><span class="ja">Meta・TikTok・YouTube・Googleの社内専任チームが、制作と運用の両方にAIを使う。</span></span></li>
+      <li><span class="n">04</span><b><span class="en">Awareness that compounds</span><span class="th">การรับรู้ที่ต่อยอดกันเอง</span><span class="ja">積み上がる認知</span></b><span class="d"><span class="en">Ads lift marketplace rankings, open retail shelves and make creators want to feature the product.</span><span class="th">โฆษณาช่วยดันอันดับในมาร์เก็ตเพลส เปิดทางสู่ชั้นวางในร้าน และทำให้ครีเอเตอร์อยากรีวิวสินค้า</span><span class="ja">広告がECモールの順位を上げ、店頭の棚を開き、クリエイターが取り上げたくなる状態をつくる。</span></span></li>
+    </ol>
+    <div class="head">
+      <h3><span class="en">Your product’s path in Japan</span><span class="th">เส้นทางของสินค้าคุณในญี่ปุ่น</span><span class="ja">日本での製品の歩み</span></h3>
+    </div>
+    <ol class="journey">
+      <li><span class="n">1</span><b><span class="en">Crowdfunding launch</span><span class="th">เปิดตัวผ่านคราวด์ฟันดิง</span><span class="ja">クラウドファンディングでローンチ</span></b><span class="d"><span class="en">Makuake proves demand and builds the first fans.</span><span class="th">Makuake พิสูจน์ความต้องการและสร้างแฟนกลุ่มแรก</span><span class="ja">Makuakeで需要を確かめ、最初のファンをつくる。</span></span></li>
+      <li><span class="n">2</span><b><span class="en">Advertising</span><span class="th">โฆษณา</span><span class="ja">広告</span></b><span class="d"><span class="en">Meta, TikTok and YouTube ads scale awareness efficiently.</span><span class="th">โฆษณาบน Meta, TikTok และ YouTube ขยายการรับรู้อย่างคุ้มค่า</span><span class="ja">Meta・TikTok・YouTube広告で効率よく認知を広げる。</span></span></li>
+      <li><span class="n">3</span><b><span class="en">Marketplaces</span><span class="th">มาร์เก็ตเพลส</span><span class="ja">ECモール</span></b><span class="d">Amazon, Rakuten, Qoo10, TikTok Shop<span class="en"> and live commerce.</span><span class="th"> และไลฟ์คอมเมิร์ซ</span><span class="ja">、ライブコマース。</span></span></li>
+      <li><span class="n">4</span><b><span class="en">Creators</span><span class="th">ครีเอเตอร์</span><span class="ja">クリエイター</span></b><span class="d"><span class="en">Sampling and creator content raise conversions.</span><span class="th">การแจกสินค้าทดลองและคอนเทนต์ของครีเอเตอร์ช่วยเพิ่มยอดขาย</span><span class="ja">サンプリングとクリエイター投稿で購入率を上げる。</span></span></li>
+      <li><span class="n">5</span><b><span class="en">Retail stores</span><span class="th">หน้าร้าน</span><span class="ja">店頭販売</span></b><span class="d"><span class="en">Shelf space at chains such as Loft and Bic Camera.</span><span class="th">วางขายในเชนอย่าง Loft และ Bic Camera</span><span class="ja">ロフトやビックカメラなどの棚へ。</span></span></li>
+    </ol>
+    <p class="note"><span class="en">Each stage feeds the next: proven demand, efficient ads, marketplace rank, retail credibility, creator pull.</span><span class="th">แต่ละขั้นส่งต่อให้ขั้นถัดไป: ความต้องการที่พิสูจน์แล้ว โฆษณาที่คุ้มค่า อันดับในมาร์เก็ตเพลส ความน่าเชื่อถือจากหน้าร้าน และแรงดึงดูดครีเอเตอร์</span><span class="ja">各段階が次を押し上げます。実証された需要、効率的な広告、モールの順位、店頭の信用、クリエイターの関心。</span></p>
+  </div>
+</section>
+
+<!-- LIVE COMMERCE -->
+<section class="band" id="live">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">Live commerce · TikTok Shop Japan</span><span class="th">ไลฟ์คอมเมิร์ซ · TikTok Shop ญี่ปุ่น</span><span class="ja">ライブコマース · TikTok Shop日本</span></p>
+      <h2><span class="en">We sell on camera, every day</span><span class="th">เราขายผ่านกล้องทุกวัน</span><span class="ja">毎日、カメラの前で売っています</span></h2>
+      <p class="lead"><span class="en">FullouT runs its own TikTok Shop channel, gensence, and plans and hosts live sales for national brands. The results so far are in food and daily goods; beauty is the next category we want to build.</span><span class="th">FullouT มีช่อง TikTok Shop ของตัวเองชื่อ gensence และวางแผนพร้อมจัดไลฟ์ขายให้แบรนด์ระดับประเทศ ผลงานจนถึงตอนนี้อยู่ในหมวดอาหารและของใช้ในบ้าน ส่วนความงามคือหมวดต่อไปที่เราต้องการสร้าง</span><span class="ja">FullouTは自社のTikTok Shopチャンネル「gensence」を運営し、大手ブランドのライブ販売も企画・実施しています。これまでの実績は食品・日用品が中心で、美容は次に育てたいカテゴリです。</span></p>
+    </div>
+    <div class="live">
+      <figure class="shot"><img src="img/live-pg.jpg" alt="P&amp;G × gensence live sale" width="500" height="1085" loading="lazy" style="aspect-ratio:4/5;object-position:50% 30%"><figcaption><b>P&amp;G × gensence</b><span><span class="en">Live sale of Joy dish detergent sets, timed with a points-back campaign.</span><span class="th">ไลฟ์ขายชุดน้ำยาล้างจาน Joy พร้อมแคมเปญคืนพอยต์</span><span class="ja">除菌ジョイのセットをライブ販売。ポイント還元キャンペーンと連動。</span></span></figcaption></figure>
+      <figure class="shot"><img src="img/live-uha.jpg" alt="UHA Mikakuto summer special live sale" width="700" height="897" loading="lazy" style="aspect-ratio:4/5;object-position:50% 20%"><figcaption><b><span class="en">UHA Mikakuto summer special</span><span class="th">UHA Mikakuto ฉบับพิเศษหน้าร้อน</span><span class="ja">UHA味覚糖 夏休み特別企画</span></b><span><span class="en">A limited 31-snack set sold live, with short clips cut from the stream to bring in viewers.</span><span class="th">ขายชุดขนม 31 ชนิดแบบจำนวนจำกัดผ่านไลฟ์ พร้อมตัดคลิปสั้นจากไลฟ์เพื่อดึงผู้ชม</span><span class="ja">31種類のスナックセットを数量限定でライブ販売。配信の切り抜き動画で集客。</span></span></figcaption></figure>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>TOP 3</b><span><span class="en">gensence, food &amp; beverage sales, June 2026 (Kalodata)</span><span class="th">gensence ยอดขายหมวดอาหารและเครื่องดื่ม มิ.ย. 2026 (Kalodata)</span><span class="ja">gensence、食品・飲料の売上ランキング、2026年6月（Kalodata）</span></span></div>
+      <div class="fact"><b>#1</b><span><span class="en">Daily food &amp; beverage ranking, and #7 across all categories, July 30, 2026</span><span class="th">อันดับรายวันหมวดอาหารและเครื่องดื่ม และอันดับ 7 จากทุกหมวด 30 ก.ค. 2026</span><span class="ja">デイリー食品・飲料ランキング1位、全カテゴリでも7位（2026年7月30日）</span></span></div>
+      <div class="fact"><b>15.2K</b><span><span class="en">Followers and 10.7K items sold on gensence (June 2026)</span><span class="th">ผู้ติดตามบน gensence และขายได้ 10,700 ชิ้น (มิ.ย. 2026)</span><span class="ja">gensenceのフォロワー数。販売件数は1.07万件（2026年6月）</span></span></div>
+    </div>
+    <div class="videos">
+      <figure class="vid"><img src="img/sv-rice.jpg" alt="Short video: mixed grain rice" width="360" height="640" loading="lazy"><figcaption><b>305K</b><span class="en">views · mixed grain rice</span><span class="th">ครั้ง · ข้าวธัญพืชรวม</span><span class="ja">回再生 · 雑穀米ミックス</span></figcaption></figure>
+      <figure class="vid"><img src="img/sv-tuna.jpg" alt="Short video: fried tuna" width="360" height="640" loading="lazy"><figcaption><b>137K</b><span class="en">views · fried tuna</span><span class="th">ครั้ง · ทูน่าทอด</span><span class="ja">回再生 · まぐろ竜田揚げ</span></figcaption></figure>
+      <figure class="vid"><img src="img/sv-tart.jpg" alt="Short video: hotel-style tart" width="360" height="640" loading="lazy"><figcaption><b>34K</b><span class="en">views · hotel-style tart</span><span class="th">ครั้ง · ทาร์ตสไตล์โรงแรม</span><span class="ja">回再生 · ホテル気分のタルト</span></figcaption></figure>
+      <figure class="vid rank"><img src="img/rank-month.jpg" alt="Kalodata food and beverage ranking, June 2026, with gensence at #3" width="417" height="766" loading="lazy"><figcaption><span class="en">Kalodata ranking, June 2026</span><span class="th">อันดับ Kalodata มิ.ย. 2026</span><span class="ja">Kalodataランキング（2026年6月）</span></figcaption></figure>
+    </div>
+    <div class="ranks">
+      <figure><img src="img/rank-daily-food.jpg" alt="Kalodata daily food and beverage ranking, July 30, 2026, gensence at #1" width="900" height="610" loading="lazy"><figcaption><b><span class="en">#1 · Food &amp; beverage, daily</span><span class="th">อันดับ 1 · อาหารและเครื่องดื่ม รายวัน</span><span class="ja">1位 · 食品・飲料（デイリー）</span></b><br><span class="en">¥1.62M in sales, 490 orders in one day (July 30, 2026)</span><span class="th">ยอดขาย ¥1.62 ล้าน 490 ออร์เดอร์ในวันเดียว (30 ก.ค. 2026)</span><span class="ja">1日で売上162万円、490件（2026年7月30日）</span></figcaption></figure>
+      <figure><img src="img/rank-daily-all.jpg" alt="Kalodata daily all-category ranking, July 30, 2026, gensence at #7" width="900" height="800" loading="lazy"><figcaption><b><span class="en">#7 · All categories, daily</span><span class="th">อันดับ 7 · ทุกหมวด รายวัน</span><span class="ja">7位 · 全カテゴリ（デイリー）</span></b><br><span class="en">¥1.67M in sales, 499 orders in one day (July 30, 2026)</span><span class="th">ยอดขาย ¥1.67 ล้าน 499 ออร์เดอร์ในวันเดียว (30 ก.ค. 2026)</span><span class="ja">1日で売上167万円、499件（2026年7月30日）</span></figcaption></figure>
+    </div>
+    <div class="head">
+      <h3><span class="en">10 products that reached #1 in their category through live commerce</span><span class="th">10 สินค้าที่ขึ้นอันดับ 1 ในหมวดผ่านไลฟ์คอมเมิร์ซ</span><span class="ja">ライブコマースでカテゴリ1位を獲得した10商品</span></h3>
+    </div>
+    <ul class="top10" aria-label="Ten products that reached #1"><li><img src="img/top01.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top02.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top03.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top04.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top05.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top06.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top07.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top08.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top09.jpg" alt="" width="300" height="300" loading="lazy"></li><li><img src="img/top10.jpg" alt="" width="300" height="300" loading="lazy"></li></ul>
+    <div class="creators">
+      <img src="img/lemon8.jpg" alt="Lemon8 creators in FullouT’s network" width="1000" height="638" loading="lazy">
+      <div class="head">
+        <p class="eyebrow"><span class="en">Creator network</span><span class="th">เครือข่ายครีเอเตอร์</span><span class="ja">クリエイターネットワーク</span></p>
+        <h3><span class="en">Japan’s first Lemon8-focused creator agency</span><span class="th">เอเจนซี่ครีเอเตอร์ที่เน้น Lemon8 แห่งแรกของญี่ปุ่น</span><span class="ja">日本初のLemon8特化型クリエイター事務所</span></h3>
+        <p><span class="en">Lemon8 is a lifestyle app popular with young Japanese women, where beauty reviews do well. FullouT’s creators there and on TikTok can sample, review and post about your product.</span><span class="th">Lemon8 เป็นแอปไลฟ์สไตล์ที่ได้รับความนิยมในกลุ่มผู้หญิงญี่ปุ่นวัยรุ่น และรีวิวความงามได้รับความสนใจสูง ครีเอเตอร์ของ FullouT บน Lemon8 และ TikTok สามารถทดลองใช้ รีวิว และโพสต์เกี่ยวกับสินค้าของคุณได้</span><span class="ja">Lemon8は日本の若い女性に人気のライフスタイルアプリで、美容のレビューがよく読まれています。FullouTのLemon8とTikTokのクリエイターが、製品の試用、レビュー、投稿を行えます。</span></p>
+        <p class="note"><span class="en">“Japan’s first” is FullouT’s own description.</span><span class="th">คำว่า “แห่งแรกของญี่ปุ่น” เป็นข้อมูลจาก FullouT</span><span class="ja">「日本初」はFullouTによる説明です。</span></p>
+      </div>
+    </div>
+    <div class="amp">
+      <div class="ampcard">
+        <div class="body">
+          <p class="eyebrow"><span class="en">Micro-influencer sampling</span><span class="th">การแจกสินค้าทดลองผ่านไมโครอินฟลูเอนเซอร์</span><span class="ja">マイクロインフルエンサーのサンプリング</span></p>
+          <span class="big2">3,000+</span>
+          <p><span class="en">Customer acquisitions a month in fashion and smoothie campaigns, through a sampling network on Instagram and TikTok.</span><span class="th">ลูกค้าใหม่ต่อเดือนในแคมเปญแฟชั่นและสมูทตี้ ผ่านเครือข่ายแจกสินค้าทดลองบน Instagram และ TikTok</span><span class="ja">InstagramとTikTokのサンプリング網による、ファッションとスムージー案件での月間獲得件数。</span></p>
+        </div>
+      </div>
+      <div class="ampcard">
+        <img src="img/sixpack.jpg" alt="SIXPACK-C, FullouT’s affiliate network" width="1200" height="385" loading="lazy">
+        <div class="body">
+          <p class="eyebrow"><span class="en">Own affiliate network</span><span class="th">เครือข่าย affiliate ของตัวเอง</span><span class="ja">自社アフィリエイトネットワーク</span></p>
+          <p><span class="en">SIXPACK-C is FullouT’s own affiliate ad network. Publishers are paid on results, so it is a sales channel most agencies do not have.</span><span class="th">SIXPACK-C คือเครือข่ายโฆษณา affiliate ของ FullouT เอง จ่ายตามผลลัพธ์ จึงเป็นช่องทางการขายที่เอเจนซี่ส่วนใหญ่ไม่มี</span><span class="ja">SIXPACK-CはFullouT自社のアフィリエイト広告ネットワークです。成果報酬型で、多くの代理店が持たない販路です。</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIKTOK -->
+<section class="band alt" id="tiktok">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">TikTok Shop · official partner</span><span class="th">TikTok Shop · พาร์ทเนอร์ทางการ</span><span class="ja">TikTok Shop · 公式パートナー</span></p>
+      <h2><span class="en">An official partner of TikTok Shop Japan</span><span class="th">พาร์ทเนอร์ทางการของ TikTok Shop ญี่ปุ่น</span><span class="ja">TikTok Shop日本の公式パートナー</span></h2>
+      <p class="lead"><span class="en">TikTok Shop started full service in Japan in June 2025. Viewers buy inside the app, straight from a video or a live stream. FullouT is approved in both of TikTok Shop’s partner programs.</span><span class="th">TikTok Shop เริ่มให้บริการเต็มรูปแบบในญี่ปุ่นเมื่อ มิ.ย. 2025 ผู้ชมซื้อสินค้าในแอปได้ทันทีจากวิดีโอหรือไลฟ์ FullouT ผ่านการรับรองในโปรแกรมพาร์ทเนอร์ทั้งสองของ TikTok Shop</span><span class="ja">TikTok Shopは2025年6月に日本で本格開始しました。動画やライブからアプリ内で購入まで完結します。FullouTはTikTok Shopの2つのパートナー制度の両方に認定されています。</span></p>
+    </div>
+    <div class="partners2">
+      <div class="pbox"><span class="badge">TSP</span><b>TikTok Shop Partner</b><ul><li><span class="en">Official service provider for sellers</span><span class="th">ผู้ให้บริการทางการสำหรับผู้ขาย</span><span class="ja">セラー向けの公式サービスプロバイダー</span></li><li><span class="en">Shop operation, short video, live streams, ads</span><span class="th">ดูแลร้าน วิดีโอสั้น ไลฟ์ โฆษณา</span><span class="ja">ショップ運営、ショート動画、ライブ配信、広告</span></li><li><span class="en">Early access to new features and official campaigns</span><span class="th">เข้าถึงฟีเจอร์ใหม่และแคมเปญทางการได้ก่อน</span><span class="ja">新機能・公式キャンペーンに早くアクセス</span></li></ul></div>
+      <div class="pbox"><span class="badge">TAP</span><b><span class="en">TikTok Affiliate Partner</span><span class="th">TikTok Affiliate Partner</span><span class="ja">TikTokアフィリエイトパートナー</span></b><ul><li><span class="en">Official matching of creators and sellers</span><span class="th">จับคู่ครีเอเตอร์กับผู้ขายอย่างเป็นทางการ</span><span class="ja">クリエイターとセラーの公式マッチング</span></li><li><span class="en">Paid on results, so the risk is low</span><span class="th">จ่ายตามผลลัพธ์ ความเสี่ยงต่ำ</span><span class="ja">成果報酬型で、少ないリスクで始められる</span></li><li><span class="en">No long-term contract; the right creators per campaign</span><span class="th">ไม่ต้องทำสัญญาระยะยาว เลือกครีเอเตอร์ที่เหมาะกับแต่ละแคมเปญ</span><span class="ja">長期契約不要。案件ごとに最適なクリエイターを起用</span></li></ul></div>
+    </div>
+    <ul class="svc">
+      <li><b><span class="en">Shop operation</span><span class="th">ดูแลร้านค้า</span><span class="ja">ショップ運用代行</span></b><ul><li><span class="en">Account setup and review</span><span class="th">เปิดบัญชีและผ่านการตรวจสอบ</span><span class="ja">アカウント開設・審査</span></li><li><span class="en">Product pages and listings</span><span class="th">หน้าสินค้าและการลงสินค้า</span><span class="ja">商品ページ制作・登録</span></li><li><span class="en">Orders, stock, shipping</span><span class="th">ออร์เดอร์ สต็อก การจัดส่ง</span><span class="ja">受注・在庫・物流</span></li><li><span class="en">Customer support</span><span class="th">บริการลูกค้า</span><span class="ja">カスタマーサポート</span></li></ul></li>
+      <li><b><span class="en">Live streams</span><span class="th">ไลฟ์สด</span><span class="ja">ライブ配信</span></b><ul><li><span class="en">Planning and scripts</span><span class="th">วางแผนและสคริปต์</span><span class="ja">企画・台本</span></li><li><span class="en">Hosts and casting</span><span class="th">พิธีกรและการคัดเลือก</span><span class="ja">ライバーのキャスティング</span></li><li><span class="en">Studio and equipment</span><span class="th">สตูดิโอและอุปกรณ์</span><span class="ja">スタジオ・機材</span></li><li><span class="en">Flash sales and reports</span><span class="th">แฟลชเซลและรายงาน</span><span class="ja">フラッシュセール・振り返り</span></li></ul></li>
+      <li><b><span class="en">Short video &amp; affiliate</span><span class="th">วิดีโอสั้นและ affiliate</span><span class="ja">ショート動画・アフィリエイト</span></b><ul><li><span class="en">Vertical video production</span><span class="th">ผลิตวิดีโอแนวตั้ง</span><span class="ja">縦型動画の制作</span></li><li><span class="en">Creator matching</span><span class="th">จับคู่ครีเอเตอร์</span><span class="ja">クリエイターのマッチング</span></li><li><span class="en">Commission plans</span><span class="th">กำหนดค่าคอมมิชชัน</span><span class="ja">料率設計</span></li><li><span class="en">Samples and posting</span><span class="th">จัดส่งตัวอย่างและควบคุมการโพสต์</span><span class="ja">サンプル手配・投稿ディレクション</span></li></ul></li>
+      <li><b><span class="en">Ads</span><span class="th">โฆษณา</span><span class="ja">広告運用</span></b><ul><li><span class="en">GMV Max and TikTok ads</span><span class="th">GMV Max และโฆษณา TikTok</span><span class="ja">GMV Max等のTikTok広告</span></li><li><span class="en">Creative testing</span><span class="th">ทดสอบครีเอทีฟ</span><span class="ja">クリエイティブ検証</span></li><li><span class="en">Boosting lives and videos</span><span class="th">บูสต์ไลฟ์และวิดีโอ</span><span class="ja">ライブ・動画のブースト</span></li><li><span class="en">ROAS and GMV reports</span><span class="th">รายงาน ROAS และ GMV</span><span class="ja">ROAS・GMVレポート</span></li></ul></li>
+    </ul>
+  </div>
+</section>
+
+<!-- JAPAN ASKS -->
+<section class="band alt" id="japan">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">What Japan asks of a beauty brand</span><span class="th">สิ่งที่ญี่ปุ่นต้องการจากแบรนด์ความงาม</span><span class="ja">日本が美容ブランドに求めること</span></p>
+      <h2><span class="en">Japan is a demanding market. We carry the hard parts.</span><span class="th">ญี่ปุ่นเป็นตลาดที่ละเอียดมาก งานยากเราดูแลให้</span><span class="ja">日本は厳しい市場です。難しい部分は私たちが引き受けます。</span></h2>
+    </div>
+    <div class="tablebox">
+      <table>
+        <thead><tr>
+          <th><span class="en">Area</span><span class="th">ด้าน</span><span class="ja">項目</span></th>
+          <th><span class="en">What it means in Japan</span><span class="th">ในญี่ปุ่นหมายถึงอะไร</span><span class="ja">日本での意味</span></th>
+          <th><span class="en">Who handles it</span><span class="th">ใครดูแล</span><span class="ja">担当</span></th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="k"><span class="en">Rules</span><span class="th">กฎระเบียบ</span><span class="ja">規制</span></td>
+            <td><span class="en">Cosmetics follow the PMD Act <span class="term">(薬機法)</span>: some ingredients are banned or limited, the full ingredient list must be in Japanese, and claims are tightly limited. A cosmetic cannot claim “whitening”, for example.</span><span class="th">เครื่องสำอางต้องเป็นไปตามกฎหมาย PMD Act <span class="term">(薬機法)</span> ส่วนผสมบางตัวห้ามใช้หรือจำกัดปริมาณ ต้องแสดงส่วนผสมทั้งหมดเป็นภาษาญี่ปุ่น และการกล่าวอ้างสรรพคุณถูกจำกัดอย่างเข้มงวด เช่น เครื่องสำอางทั่วไปอ้างว่า “ไวท์เทนนิ่ง” ไม่ได้</span><span class="ja">化粧品は薬機法<span class="term">（PMD Act）</span>に従います。使用禁止・配合制限のある成分があり、全成分を日本語で表示する必要があり、効能表現も厳しく制限されます。たとえば一般の化粧品では「美白」をうたえません。</span></td>
+            <td><span class="own jp">FullouT</span></td>
+          </tr>
+          <tr>
+            <td class="k"><span class="en">Fit</span><span class="th">ความเหมาะสม</span><span class="ja">適合</span></td>
+            <td><span class="en">Japanese shoppers compare texture, scent, size and packaging closely. Some products sell better as a Japan version.</span><span class="th">ผู้บริโภคญี่ปุ่นเปรียบเทียบเนื้อสัมผัส กลิ่น ขนาด และบรรจุภัณฑ์อย่างละเอียด สินค้าบางตัวขายได้ดีกว่าเมื่อปรับเป็นเวอร์ชันญี่ปุ่น</span><span class="ja">日本の消費者は、テクスチャー、香り、容量、パッケージを細かく比べます。日本向けに仕様を変えたほうが売れる製品もあります。</span></td>
+            <td><span class="own jp">FullouT</span><span class="own bk">BKU</span></td>
+          </tr>
+          <tr>
+            <td class="k"><span class="en">Proof first</span><span class="th">ทดสอบก่อน</span><span class="ja">先に検証</span></td>
+            <td><span class="en">Test demand with a crowdfunding campaign or a live-commerce launch before anyone commits to large stock.</span><span class="th">ทดสอบความต้องการด้วยแคมเปญคราวด์ฟันดิงหรือการเปิดตัวผ่านไลฟ์คอมเมิร์ซ ก่อนจะตัดสินใจสั่งสต็อกจำนวนมาก</span><span class="ja">大量の在庫を決める前に、クラウドファンディングやライブコマースで需要を確かめます。</span></td>
+            <td><span class="own jp">FullouT</span></td>
+          </tr>
+          <tr>
+            <td class="k"><span class="en">Quality and supply</span><span class="th">คุณภาพและการส่งมอบ</span><span class="ja">品質と供給</span></td>
+            <td><span class="en">The same quality in every lot, clear documents and on-time shipping. Japanese buyers check all three.</span><span class="th">คุณภาพเท่ากันทุกล็อต เอกสารครบถ้วน และส่งของตรงเวลา ผู้ซื้อญี่ปุ่นตรวจทั้งสามอย่าง</span><span class="ja">どのロットでも同じ品質、整った書類、納期どおりの出荷。日本のバイヤーはこの3つをすべて確認します。</span></td>
+            <td><span class="own bk">BKU</span></td>
+          </tr>
+          <tr>
+            <td class="k"><span class="en">Selling</span><span class="th">การขาย</span><span class="ja">販売</span></td>
+            <td><span class="en">Ads, creators and live commerce first, then Amazon, Rakuten, Qoo10 and TikTok Shop, then store shelves.</span><span class="th">เริ่มจากโฆษณา ครีเอเตอร์ และไลฟ์คอมเมิร์ซ ต่อด้วย Amazon, Rakuten, Qoo10 และ TikTok Shop แล้วจึงขยายสู่หน้าร้าน</span><span class="ja">まず広告・クリエイター・ライブコマース、次にAmazon、楽天、Qoo10、TikTok Shop、その先に店頭へ。</span></td>
+            <td><span class="own jp">FullouT</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="band white" id="fit">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">Who we are looking for</span><span class="th">แบรนด์ที่เรามองหา</span><span class="ja">求めているブランド</span></p>
+      <h2><span class="en">Is your brand a fit?</span><span class="th">แบรนด์ของคุณเหมาะกับเราหรือไม่</span><span class="ja">御社のブランドは合っていますか？</span></h2>
+      <p class="lead"><span class="en">We take on a few brands at a time, so we look for these five things.</span><span class="th">เราทำงานกับแบรนด์ทีละไม่กี่ราย จึงมองหา 5 ข้อนี้</span><span class="ja">同時に扱うブランドは少数のため、次の5点を重視しています。</span></p>
+    </div>
+    <ul class="fit">
+      <li><span class="ck">1</span><b><span class="en">A clear edge</span><span class="th">จุดเด่นชัดเจน</span><span class="ja">明確な強み</span></b><span><span class="en">One thing your product does better than others.</span><span class="th">มีสิ่งหนึ่งที่สินค้าของคุณทำได้ดีกว่าคนอื่น</span><span class="ja">他社より優れている点が1つある。</span></span></li>
+      <li><span class="ck">2</span><b><span class="en">One skin concern</span><span class="th">ตอบโจทย์ปัญหาผิวเฉพาะ</span><span class="ja">1つの肌悩み</span></b><span><span class="en">Made for a specific problem, not for everything.</span><span class="th">ทำมาเพื่อปัญหาเฉพาะ ไม่ใช่ทุกอย่าง</span><span class="ja">何にでも効く製品ではなく、特定の悩みのための製品。</span></span></li>
+      <li><span class="ck">3</span><b><span class="en">Something Japan doesn’t have</span><span class="th">สิ่งที่ญี่ปุ่นยังไม่มี</span><span class="ja">日本にないもの</span></b><span><span class="en">A Thai ingredient, a research story or a way of making it.</span><span class="th">ส่วนผสมไทย เรื่องราวจากงานวิจัย หรือวิธีการผลิต</span><span class="ja">タイの成分、研究の背景、つくり方。</span></span></li>
+      <li><span class="ck">4</span><b><span class="en">Open to a Japan version</span><span class="th">พร้อมทำเวอร์ชันญี่ปุ่น</span><span class="ja">日本版に前向き</span></b><span><span class="en">Willing to adjust formula, size or packaging for Japan.</span><span class="th">ยินดีปรับสูตร ขนาด หรือบรรจุภัณฑ์ให้เหมาะกับญี่ปุ่น</span><span class="ja">日本向けに処方・容量・パッケージを調整できる。</span></span></li>
+      <li><span class="ck">5</span><b><span class="en">Shows well on camera</span><span class="th">ดูดีบนกล้อง</span><span class="ja">カメラ映えする</span></b><span><span class="en">A texture and a way of using it that a live stream can show.</span><span class="th">เนื้อสัมผัสและวิธีใช้ที่โชว์ผ่านไลฟ์สดได้</span><span class="ja">ライブ配信で伝わるテクスチャーと使い方。</span></span></li>
+    </ul>
+    <p class="plus"><span class="en"><b>A strong plus:</b> the product already sells well in Thailand.</span><span class="th"><b>ข้อได้เปรียบ:</b> สินค้าขายดีในประเทศไทยอยู่แล้ว</span><span class="ja"><b>さらに有利な点：</b>タイ国内ですでに売れていること。</span></p>
+  </div>
+</section>
+
+<!-- PARTNERSHIP -->
+<section class="band alt" id="partnership">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">What a partnership looks like</span><span class="th">ความร่วมมือเป็นอย่างไร</span><span class="ja">パートナーシップの形</span></p>
+      <h2><span class="en">You make the product. We do the rest.</span><span class="th">คุณผลิตสินค้า ส่วนที่เหลือเราดูแล</span><span class="ja">製品づくりは御社に。それ以外は私たちに。</span></h2>
+    </div>
+    <div class="halves">
+      <div class="pbox"><span class="tagc" style="align-self:flex-start;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;padding:3px 11px;border-radius:999px;background:var(--th-soft);color:var(--th-ink)"><span class="en">YOU PROVIDE</span><span class="th">สิ่งที่คุณเตรียม</span><span class="ja">御社にお願いすること</span></span><ul>
+        <li><span class="en">A distinctive product with traction in Thailand</span><span class="th">สินค้าที่โดดเด่นและมียอดขายในไทย</span><span class="ja">タイで実績のある、特徴のある製品</span></li>
+        <li><span class="en">Stable supply, and product data such as full ingredients and specs</span><span class="th">การผลิตที่สม่ำเสมอ และข้อมูลสินค้า เช่น ส่วนผสมทั้งหมดและสเปก</span><span class="ja">安定供給と、全成分・仕様などの製品情報</span></li>
+        <li><span class="en">Basic marketing material: photos and your brand story</span><span class="th">สื่อการตลาดพื้นฐาน: รูปภาพและเรื่องราวของแบรนด์</span><span class="ja">基本的な販促素材：写真とブランドストーリー</span></li>
+      </ul></div>
+      <div class="pbox"><span class="tagc" style="align-self:flex-start;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;padding:3px 11px;border-radius:999px;background:var(--jp-soft);color:var(--jp-ink)"><span class="en">WE HANDLE</span><span class="th">สิ่งที่เราดูแล</span><span class="ja">私たちが担うこと</span></span><ul>
+        <li><span class="en">Japan check: rules, claims, labeling and import logistics</span><span class="th">ตรวจสอบสำหรับญี่ปุ่น: กฎระเบียบ คำกล่าวอ้าง ฉลาก และโลจิสติกส์การนำเข้า</span><span class="ja">日本向けチェック：規制、効能表現、表示、輸入物流</span></li>
+        <li><span class="en">Crowdfunding, ads, creators and live commerce</span><span class="th">คราวด์ฟันดิง โฆษณา ครีเอเตอร์ และไลฟ์คอมเมิร์ซ</span><span class="ja">クラウドファンディング、広告、クリエイター、ライブコマース</span></li>
+        <li><span class="en">Marketplace operation and retail development</span><span class="th">ดูแลมาร์เก็ตเพลสและขยายสู่หน้าร้าน</span><span class="ja">ECモール運営と店頭展開</span></li>
+        <li><span class="en">Clear reporting, so you can watch your Japan sales grow</span><span class="th">รายงานที่ชัดเจน ให้คุณเห็นยอดขายในญี่ปุ่นเติบโต</span><span class="ja">わかりやすいレポートで、日本での売上の伸びを共有</span></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="band" id="steps">
+  <div class="inner">
+    <div class="head">
+      <p class="eyebrow"><span class="en">How we start</span><span class="th">เริ่มต้นอย่างไร</span><span class="ja">進め方</span></p>
+      <h2><span class="en">Start small. Grow on results.</span><span class="th">เริ่มเล็ก ขยายตามผลลัพธ์</span><span class="ja">小さく始めて、結果で広げる。</span></h2>
+    </div>
+    <ol class="steps">
+      <li><span class="n">01</span><b><span class="en">Meet and sample</span><span class="th">พบกันและขอตัวอย่าง</span><span class="ja">面談とサンプル</span></b><span><span class="en">At COSMEX or at your office. We pay for samples of the products that fit.</span><span class="th">ที่งาน COSMEX หรือที่สำนักงานของคุณ เราจ่ายค่าตัวอย่างของสินค้าที่เหมาะสม</span><span class="ja">COSMEXまたは御社オフィスで。合う製品のサンプルは当方が費用を負担します。</span></span></li>
+      <li><span class="n">02</span><b><span class="en">Japan check</span><span class="th">ประเมินสำหรับญี่ปุ่น</span><span class="ja">日本向けチェック</span></b><span><span class="en">We review ingredients, claims and price for Japan, and tell you plainly what it would take.</span><span class="th">เราตรวจส่วนผสม คำกล่าวอ้าง และราคาสำหรับญี่ปุ่น แล้วบอกคุณตรง ๆ ว่าต้องทำอะไรบ้าง</span><span class="ja">成分・効能表現・価格を日本向けに確認し、何が必要かを率直にお伝えします。</span></span></li>
+      <li><span class="n">03</span><b><span class="en">Test launch</span><span class="th">เปิดตัวทดสอบ</span><span class="ja">テストローンチ</span></b><span><span class="en">A first order and a test launch in Japan by crowdfunding or live commerce. Budget, roles and goals are agreed in writing first.</span><span class="th">ออร์เดอร์แรกและเปิดตัวทดสอบในญี่ปุ่นผ่านคราวด์ฟันดิงหรือไลฟ์คอมเมิร์ซ โดยตกลงงบประมาณ หน้าที่ และเป้าหมายเป็นลายลักษณ์อักษรก่อน</span><span class="ja">初回発注と、クラウドファンディングまたはライブコマースでの日本テスト販売。予算・役割・目標は事前に書面で合意します。</span></span></li>
+      <li><span class="n">04</span><b><span class="en">Scale</span><span class="th">ขยายตลาด</span><span class="ja">本格展開</span></b><span><span class="en">If customers respond, we expand to marketplaces and stores, and agree long-term terms such as Japan distribution rights.</span><span class="th">ถ้าลูกค้าตอบรับดี เราจะขยายสู่มาร์เก็ตเพลสและหน้าร้าน และตกลงเงื่อนไขระยะยาว เช่น สิทธิ์การจัดจำหน่ายในญี่ปุ่น</span><span class="ja">反応がよければECモールと店頭に広げ、日本での販売権など長期の条件を取り決めます。</span></span></li>
+    </ol>
+    <p class="note"><span class="en">Each step has its own agreement. Nothing is decided at the first meeting.</span><span class="th">แต่ละขั้นมีข้อตกลงของตัวเอง ไม่มีการผูกมัดใด ๆ ในการพบกันครั้งแรก</span><span class="ja">各段階ごとに合意を交わします。初回の面談で何かが決まることはありません。</span></p>
+  </div>
+</section>
+
+<!-- OFFER + CONTACT -->
+<section class="band deep" id="offer">
+  <div class="inner" id="contact">
+    <div class="offer">
+      <div class="head">
+        <p class="eyebrow"><span class="en">Next step</span><span class="th">ขั้นตอนถัดไป</span><span class="ja">次のステップ</span></p>
+        <h2><span class="en">Show us one product.</span><span class="th">ให้เราดูสินค้าของคุณ 1 ชิ้น</span><span class="ja">製品を1つ見せてください。</span></h2>
+        <p class="lead"><span class="en">Send a product link or photo, or tell us your COSMEX booth number. We will give you a first view on how it could sell in Japan:</span><span class="th">ส่งลิงก์หรือรูปสินค้า หรือบอกหมายเลขบูธของคุณที่ COSMEX เราจะให้ความเห็นเบื้องต้นว่าสินค้านี้จะขายในญี่ปุ่นได้อย่างไร</span><span class="ja">製品のリンクか写真、またはCOSMEXのブース番号をお知らせください。日本でどう売れそうか、最初の見立てをお返しします。</span></p>
+        <ul>
+          <li><span class="en">Which claims Japan allows for it</span><span class="th">คำกล่าวอ้างใดบ้างที่ญี่ปุ่นอนุญาต</span><span class="ja">日本で使える効能表現</span></li>
+          <li><span class="en">Which channel to start with</span><span class="th">ควรเริ่มจากช่องทางไหน</span><span class="ja">最初に選ぶべき販路</span></li>
+          <li><span class="en">What the main risks are</span><span class="th">ความเสี่ยงหลักมีอะไรบ้าง</span><span class="ja">主なリスク</span></li>
+        </ul>
+      </div>
+      <div class="head">
+        <p class="eyebrow"><span class="en">Talk to Yuhei directly · tap or scan</span><span class="th">คุยกับ Yuhei โดยตรง · แตะหรือสแกน</span><span class="ja">Yuheiに直接連絡 · タップまたは読み取り</span></p>
+        <div class="qrs">
+          <figure class="qr"><a href="https://line.me/ti/p/3qSev_mBDH" target="_blank" rel="noopener" aria-label="Add Yuhei Yamada on LINE"><img src="img/qr-line.png" alt="LINE QR code" width="280" height="280"></a><figcaption>LINE</figcaption></figure>
+          <figure class="qr"><a href="https://wa.me/qr/3CAPOUFNTLBNG1" target="_blank" rel="noopener" aria-label="Add Yuhei Yamada on WhatsApp"><img src="img/qr-whatsapp.png" alt="WhatsApp QR code" width="280" height="280"></a><figcaption>WhatsApp</figcaption></figure>
+          <figure class="qr"><a href="https://u.wechat.com/kFNc5WAS9Bz_emGzHcaXTLs?s=3" target="_blank" rel="noopener" aria-label="Add Yuhei Yamada on WeChat"><img src="img/qr-wechat.png" alt="WeChat QR code" width="280" height="280"></a><figcaption>WeChat</figcaption></figure>
+        </div>
+        <div class="mailrow"><span class="mail" id="mail">yamada@bku1.com</span><button type="button" class="copy" id="copy"><span class="en">Copy email</span><span class="th">คัดลอกอีเมล</span><span class="ja">メールをコピー</span></button></div>
+        <div class="chips">
+          <a href="https://trade.bku1.com/" target="_blank" rel="noopener">trade.bku1.com ↗</a>
+          <a href="https://fullout.jp/en" target="_blank" rel="noopener">fullout.jp/en ↗</a>
+          <a href="https://www.linkedin.com/in/yyasi/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="people">
+      <div class="person">
+        <img class="yu" src="img/yuhei.jpg" alt="Yuhei Yamada" width="72" height="72">
+        <div><b>Yuhei Yamada</b><span>Director &amp; COO, BKU CO.,LTD.</span><span><span class="en">Bangkok · Japanese, English</span><span class="th">กรุงเทพฯ · ภาษาญี่ปุ่น อังกฤษ</span><span class="ja">バンコク · 日本語・英語</span></span></div>
+      </div>
+      <div class="person">
+        <img src="img/isaka.jpg" alt="Yusuke Isaka" width="72" height="72">
+        <div><b>Yusuke Isaka</b><span>Director · Co-founder, FullouT Co., Ltd.</span><span><span class="en">Tokyo · Leads D2C and cross-border commerce</span><span class="th">โตเกียว · ดูแลธุรกิจ D2C และการค้าข้ามพรมแดน</span><span class="ja">東京 · D2C・越境コマース担当</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="src">
+  <div class="inner">
+    <p><span class="en">Sources: Makuake project pages (checked October 2026); FullouT company materials and fullout.jp, including Kalodata rankings; trade.bku1.com. Client results, rankings and the ¥10B ad-spend figure are FullouT’s; client names in results are not disclosed.</span><span class="th">แหล่งข้อมูล: หน้าโปรเจกต์ Makuake (ตรวจสอบ ต.ค. 2026), เอกสารบริษัทและเว็บไซต์ fullout.jp รวมถึงอันดับจาก Kalodata, trade.bku1.com ผลลัพธ์ของลูกค้า อันดับ และตัวเลขงบโฆษณา ¥10B เป็นข้อมูลจาก FullouT และไม่เปิดเผยชื่อลูกค้า</span><span class="ja">出典：Makuake各プロジェクトページ（2026年10月確認）、FullouT会社資料およびfullout.jp（Kalodataランキングを含む）、trade.bku1.com。クライアント実績・ランキング・広告運用額100億円はFullouTの数値で、実績のクライアント名は非公開です。</span></p>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var page = document.getElementById('page');
+  var btns = document.querySelectorAll('.langs button');
+  function setLang(l) {
+    page.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.l === l)); });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      setLang(b.dataset.l);
+      try { localStorage.setItem('lang', b.dataset.l); } catch (e) {}
+    });
+  });
+  var start = 'en';
+  var isThai = (navigator.language || '').toLowerCase().indexOf('th') === 0;
+  var isJa = (navigator.language || '').toLowerCase().indexOf('ja') === 0;
+  try {
+    var saved = localStorage.getItem('lang');
+    if (saved === 'en' || saved === 'th' || saved === 'ja') start = saved;
+    else if (isThai) start = 'th';
+    else if (isJa) start = 'ja';
+  } catch (e) { if (isThai) start = 'th'; else if (isJa) start = 'ja'; }
+  if (location.hash === '#th') start = 'th';
+  if (location.hash === '#en') start = 'en';
+  if (location.hash === '#ja') start = 'ja';
+  setLang(start);
+
+  var copy = document.getElementById('copy');
+  copy.addEventListener('click', function () {
+    var t = document.getElementById('mail').textContent;
+    var done = function () { copy.querySelector('.en').textContent = 'Copied'; copy.querySelector('.th').textContent = 'คัดลอกแล้ว'; copy.querySelector('.ja').textContent = 'コピーしました'; };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    };
+    try { navigator.clipboard.writeText(t).then(done, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body></html>

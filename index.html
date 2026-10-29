@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="robots" content="noindex, nofollow"></head><body>
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="robots" content="noindex, nofollow"></head><body>
 <title>FullouT × BKU</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -383,14 +383,14 @@ footer.src p { max-width: 90ch; }
 html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); }
 </style>
 
-<div id="page" data-lang="en">
+<div id="page" data-lang="th">
 
 <nav class="topbar" aria-label="Language">
   <div class="inner">
     <span class="brand"><span class="b1">FullouT</span><span class="x">×</span><span class="b2">BKU</span></span>
     <div class="langs" role="group" aria-label="Language / ภาษา / 言語">
-      <button type="button" id="lang-en" data-l="en" aria-pressed="true">EN</button>
-      <button type="button" id="lang-th" data-l="th" aria-pressed="false">ไทย</button>
+      <button type="button" id="lang-en" data-l="en" aria-pressed="false">EN</button>
+      <button type="button" id="lang-th" data-l="th" aria-pressed="true">ไทย</button>
       <button type="button" id="lang-ja" data-l="ja" aria-pressed="false">日本語</button>
     </div>
   </div>
@@ -861,15 +861,7 @@ html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); }
       try { localStorage.setItem('lang', b.dataset.l); } catch (e) {}
     });
   });
-  var start = 'en';
-  var isThai = (navigator.language || '').toLowerCase().indexOf('th') === 0;
-  var isJa = (navigator.language || '').toLowerCase().indexOf('ja') === 0;
-  try {
-    var saved = localStorage.getItem('lang');
-    if (saved === 'en' || saved === 'th' || saved === 'ja') start = saved;
-    else if (isThai) start = 'th';
-    else if (isJa) start = 'ja';
-  } catch (e) { if (isThai) start = 'th'; else if (isJa) start = 'ja'; }
+  var start = 'th';
   if (location.hash === '#th') start = 'th';
   if (location.hash === '#en') start = 'en';
   if (location.hash === '#ja') start = 'ja';
